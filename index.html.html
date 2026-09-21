@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazeen Zaman | Full-Stack Developer & AI Vibe Coder</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS (Animate On Scroll) Library CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e2229;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Accent colors matching reference design */
+    .yellow-accent {
+      color: #ffcc00;
+    }
+    
+    .yellow-bg {
+      background-color: #ffcc00;
+    }
+
+    .yellow-border {
+      border-color: #ffcc00;
+    }
+
+    .card-bg {
+      background-color: #262b35;
+      border: 1px solid #323846;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card-bg:hover {
+      border-color: #ffcc00;
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Underline style matching sample text highlights */
+    .yellow-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .yellow-underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 4px;
+      background-color: #ffcc00;
+      border-radius: 2px;
+    }
+
+    /* Floating Image Animation */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating-container {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #1e2229; }
+    ::-webkit-scrollbar-thumb { background: #323846; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #ffcc00; }
+  </style>
+</head>
+<body class="selection:bg-[#ffcc00] selection:text-black">
+
+  <!-- Sticky Header Nav -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#1e2229]/90 backdrop-blur-md border-b border-gray-700/50 py-5 px-6 md:px-16 transition-all">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#hero" class="text-2xl font-extrabold tracking-tight text-white">
+        Fazeen<span class="yellow-accent">Zaman</span>
+      </a>
+
+      <!-- Menu Links -->
+      <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+        <a href="#hero" class="hover:text-[#ffcc00] transition-colors">Home</a>
+        <a href="#about" class="hover:text-[#ffcc00] transition-colors">About</a>
+        <a href="#experience" class="hover:text-[#ffcc00] transition-colors">Experience</a>
+        <a href="#services" class="hover:text-[#ffcc00] transition-colors">Services</a>
+        <a href="#projects" class="hover:text-[#ffcc00] transition-colors">Portfolio</a>
+        <a href="#certifications" class="hover:text-[#ffcc00] transition-colors">Certs</a>
+        <a href="#faq" class="hover:text-[#ffcc00] transition-colors">FAQ</a>
+        <a href="#contact" class="hover:text-[#ffcc00] transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="#contact" class="hidden sm:inline-block px-5 py-2 yellow-bg text-black font-bold text-xs rounded-full shadow-md hover:bg-yellow-400 transition-all">
+        Hire Me
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="max-w-7xl mx-auto px-6 md:px-16 pt-32 pb-20 min-h-screen flex items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Big Headline -->
+      <div class="lg:col-span-4 space-y-6 text-left" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-white">
+          Hello! I'm <br/>
+          <span class="yellow-accent yellow-underline">Fazeen Zaman</span> <br/>
+          And I'm <br/>
+          <span class="yellow-accent yellow-underline">Vibe Coder</span>
+        </h1>
+
+        <!-- Social Icons -->
+        <div class="pt-6">
+          <p class="text-xs text-gray-400 font-medium mb-3">Scan or click to connect:</p>
+          <div class="flex items-center space-x-3">
+            <a href="https://wa.me/923298554647" target="_blank" title="WhatsApp Chat" class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+            <a href="mailto:fazeenzaman@gmail.com" title="Send Email" class="w-10 h-10 rounded-full bg-[#ea4335] text-white flex items-center justify-center hover:scale-110 transition-transform">
+              <i class="fa-solid fa-envelope text-lg"></i>
+            </a>
+            <a href="tel:03298554647" title="Call Me" class="w-10 h-10 rounded-full bg-[#34b7f1] text-white flex items-center justify-center hover:scale-110 transition-transform">
+              <i class="fa-solid fa-phone text-base"></i>
+            </a>
+            <a href="#qr-section" class="w-10 h-10 rounded-full yellow-bg text-black flex items-center justify-center hover:scale-110 transition-transform font-bold text-sm" title="Scan QR Code">
+              <i class="fa-solid fa-qrcode text-base"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Column: Profile Image with Zoom Crop (Chair Hidden) -->
+      <div class="lg:col-span-5 flex justify-center relative my-8 lg:my-0" data-aos="zoom-in" data-aos-duration="1200">
+        <!-- Circle Yellow Background Accent -->
+        <div class="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] yellow-bg rounded-full absolute bottom-0 z-0 shadow-2xl"></div>
+        
+        <!-- Zoomed Profile Image to hide the chair edges -->
+        <div class="relative z-10 w-[260px] sm:w-[340px] h-[340px] sm:h-[420px] rounded-b-full overflow-hidden floating-container">
+          <img 
+            src="ChatGPT Image Aug 11, 2026, 12_37_32 PM.png" 
+            alt="Fazeen Zaman Profile" 
+            class="w-full h-full object-cover object-[center_15%] scale-135 filter drop-shadow-2xl"
+          />
+        </div>
+      </div>
+
+      <!-- Right Column: Bio, CTA & Metrics -->
+      <div class="lg:col-span-3 space-y-8" data-aos="fade-left" data-aos-duration="1000">
+        <p class="text-gray-300 text-sm leading-relaxed font-normal">
+          Digital Growth Executive & AI Vibe Coder[cite: 1]. I construct full-stack web platforms, Flutter mobile apps, and WooCommerce stores using AI workflows (Claude, ChatGPT, VS Code AI) for rapid execution[cite: 1].
+        </p>
+
+        <div class="space-y-4">
+          <a href="#contact" class="inline-block w-full text-center px-8 py-3.5 yellow-bg text-black font-bold text-sm rounded-full shadow-lg hover:bg-yellow-400 hover:scale-105 transition-all">
+            Contact Me
+          </a>
+          
+          <div class="pt-1 text-center sm:text-left">
+            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold yellow-accent hover:underline">
+              <i class="fa-solid fa-download"></i>
+              <span>Download my CV</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-5 pt-4 border-t border-gray-700/60">
+          <div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white">10x+</div>
+            <div class="text-xs text-gray-400 font-medium">Faster AI Dev Speed</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white">4+</div>
+            <div class="text-xs text-gray-400 font-medium">Major Web Platforms Built</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-extrabold text-white">Full-Stack</div>
+            <div class="text-xs text-gray-400 font-medium">Web, Flutter & Databases</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact QR Code Display Section -->
+  <section id="qr-section" class="max-w-7xl mx-auto px-6 md:px-16 py-16 border-t border-gray-800">
+    <div class="card-bg p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8" data-aos="fade-up">
+      <div class="space-y-3 text-center md:text-left">
+        <span class="text-xs font-bold uppercase tracking-widest yellow-accent">Instant Contact Scan</span>
+        <h3 class="text-2xl md:text-3xl font-bold text-white">Scan My QR Code</h3>
+        <p class="text-gray-300 text-sm max-w-md">
+          Scan this QR code with your smartphone camera to save contact details (`fazeenzaman@gmail.com`[cite: 1] & `0329-8554647`[cite: 1]) or launch a direct WhatsApp chat!
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded-2xl shadow-xl flex flex-col items-center">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://wa.me/923298554647" alt="Contact QR Code" class="w-40 h-40">
+        <span class="text-[10px] text-black font-semibold mt-2">WhatsApp / Quick Connect</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me & Education Section -->
+  <section id="about" class="max-w-7xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-xs font-bold uppercase tracking-widest yellow-accent mb-2">About My Background</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Bridging Business Strategy with AI Development</h3>
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
+          I am a Digital Growth Executive based in Lahore, Pakistan[cite: 1]. Combining my Bachelor of Business Administration (Executive) degree with cutting-edge vibe coding techniques, I bridge prompt engineering and LLM integrations to build software in days[cite: 1].
+        </p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          From multi-role SaaS marketplaces like JETKÖ to high-converting WordPress & Shopify e-commerce sites, I deliver functional, scalable solutions[cite: 1].
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-full text-xs font-semibold bg-[#262b35] text-gray-200 border border-gray-700">WordPress / WooCommerce</span>
+          <span class="px-4 py-2 rounded-full text-xs font-semibold bg-[#262b35] text-gray-200 border border-gray-700">Shopify & Ad Monetization</span>
+          <span class="px-4 py-2 rounded-full text-xs font-semibold bg-[#262b35] text-gray-200 border border-gray-700">Flutter & Firebase</span>
+        </div>
+      </div>
+
+      <div class="card-bg p-8 rounded-3xl" data-aos="fade-left">
+        <h4 class="text-xl font-bold text-white mb-6 border-b border-gray-700 pb-3">Education & Academic Background</h4>
+        <div class="space-y-6">
+          <div class="relative pl-6 border-l-2 border-[#ffcc00]">
+            <span class="text-xs font-mono yellow-accent">2025 - 2029</span>
+            <h5 class="text-base font-bold text-white">Bachelor of Business Administration (Executive)</h5>
+            <p class="text-xs text-gray-400">National College of Business Administration and Economics[cite: 1]</p>
+          </div>
+          <div class="relative pl-6 border-l-2 border-gray-700">
+            <span class="text-xs font-mono text-gray-400">2021 - 2023</span>
+            <h5 class="text-base font-bold text-white">Intermediate (Pre-Medical)</h5>
+            <p class="text-xs text-gray-400">BISE FSD[cite: 1]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Timeline -->
+  <section id="experience" class="max-w-7xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-xs font-bold uppercase tracking-widest yellow-accent mb-2">Career Journey</h2>
+      <h3 class="text-3xl md:text-4xl font-extrabold text-white">Professional Experience</h3>
+    </div>
+
+    <div class="space-y-8 max-w-4xl mx-auto">
+      <div class="card-bg p-8 rounded-2xl relative" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4 border-b border-gray-700/60 pb-3">
+          <div>
+            <h4 class="text-xl font-bold text-white">Digital Growth Executive</h4>
+            <p class="text-sm yellow-accent font-medium">Bluesheep Technologies Pvt Ltd[cite: 1]</p>
+          </div>
+          <span class="px-4 py-1.5 rounded-full text-xs font-mono yellow-bg text-black font-semibold self-start md:self-auto">Mar 2025 - Present</span>
+        </div>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside leading-relaxed">
+          <li>Managed digital platforms, website projects, and online content for organizational visibility[cite: 1].</li>
+          <li>Developed and managed WordPress websites, social media accounts, and AI-assisted content[cite: 1].</li>
+          <li>Optimized lead-generation landing pages and deployed AI-powered operational workflows[cite: 1].</li>
+        </ul>
+      </div>
+
+      <div class="card-bg p-8 rounded-2xl relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4 border-b border-gray-700/60 pb-3">
+          <div>
+            <h4 class="text-xl font-bold text-white">Digital Operations Executive</h4>
+            <p class="text-sm yellow-accent font-medium">Marlayz Brüder[cite: 1]</p>
+          </div>
+          <span class="px-4 py-1.5 rounded-full text-xs font-mono bg-gray-700 text-gray-200 font-semibold self-start md:self-auto">Apr 2024 - Mar 2025</span>
+        </div>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside leading-relaxed">
+          <li>Managed and maintained WordPress website content and functionality[cite: 1].</li>
+          <li>Planned and published social media content and handled engagement management[cite: 1].</li>
+          <li>Created digital marketing content using AI tools for elevated online visibility[cite: 1].</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="max-w-7xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-xs font-bold uppercase tracking-widest yellow-accent mb-2">My Specialization</h2>
+      <h3 class="text-3xl md:text-4xl font-extrabold text-white">Services I Provide</h3>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-bg p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 rounded-xl yellow-bg text-black flex items-center justify-center text-xl font-bold mb-6">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h4 class="text-xl font-bold text-white mb-3">AI Vibe Coding & Web Apps</h4>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Custom web platforms, multi-role RBAC portals, and mobile apps built using AI development environments[cite: 1].
+        </p>
+        <ul class="text-xs text-gray-300 space-y-2 font-mono">
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>Multi-role RBAC Backends[cite: 1]</li>
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>Firebase Realtime DB[cite: 1]</li>
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>Custom API Integrations[cite: 1]</li>
+        </ul>
+      </div>
+
+      <div class="card-bg p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 rounded-xl yellow-bg text-black flex items-center justify-center text-xl font-bold mb-6">
+          <i class="fa-brands fa-wordpress"></i>
+        </div>
+        <h4 class="text-xl font-bold text-white mb-3">WordPress & E-Commerce</h4>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          High-converting agency platforms, corporate textile stores, and WooCommerce / Shopify web setups[cite: 1].
+        </p>
+        <ul class="text-xs text-gray-300 space-y-2 font-mono">
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>Custom Plugins & Themes[cite: 1]</li>
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>Elementor / Gutenberg[cite: 1]</li>
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>Shopify & WooCommerce[cite: 1]</li>
+        </ul>
+      </div>
+
+      <div class="card-bg p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-12 h-12 rounded-xl yellow-bg text-black flex items-center justify-center text-xl font-bold mb-6">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <h4 class="text-xl font-bold text-white mb-3">Digital Growth & Monetization</h4>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Google AdSense monetization, Monetag configurations, Meta Ads targeting, and automated AI workflows[cite: 1].
+        </p>
+        <ul class="text-xs text-gray-300 space-y-2 font-mono">
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>AdSense & Monetag Setup[cite: 1]</li>
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>Meta & Google Ads[cite: 1]</li>
+          <li><i class="fa-solid fa-check yellow-accent mr-2"></i>AI Content Pipelines[cite: 1]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Portfolio Section -->
+  <section id="projects" class="max-w-7xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-xs font-bold uppercase tracking-widest yellow-accent mb-2">Recent Work</h2>
+      <h3 class="text-3xl md:text-4xl font-extrabold text-white">Featured Projects</h3>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card-bg rounded-2xl p-8 flex flex-col justify-between" data-aos="fade-up">
+        <div>
+          <span class="text-xs yellow-accent font-semibold uppercase tracking-wider">Full-Stack Application</span>
+          <h4 class="text-2xl font-bold text-white mt-2 mb-3">JETKÖ — On-Demand Cleaning Marketplace</h4>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            Connecting Customers, Partner Companies, Workers, and Admins via multi-role RBAC[cite: 1]. Implemented real-time booking tracking, GPS service milestones, identity masking, and photo verification using Firebase/Firestore and Flutter[cite: 1].
+          </p>
+        </div>
+        <div class="text-xs text-gray-400 font-mono pt-4 border-t border-gray-700/50">
+          Flutter • Firebase • Firestore • RBAC Architecture
+        </div>
+      </div>
+
+      <div class="card-bg rounded-2xl p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <span class="text-xs yellow-accent font-semibold uppercase tracking-wider">Corporate Web Build</span>
+          <h4 class="text-2xl font-bold text-white mt-2 mb-3">Marlayz Brüder — Workwear Website</h4>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            WordPress site for a workwear & garment textile manufacturer[cite: 1]. Structured responsive product and service catalogs using Elementor and Gutenberg[cite: 1].
+          </p>
+        </div>
+        <div class="text-xs text-gray-400 font-mono pt-4 border-t border-gray-700/50">
+          WordPress • Elementor • Gutenberg • Meta Suite
+        </div>
+      </div>
+
+      <div class="card-bg rounded-2xl p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <span class="text-xs yellow-accent font-semibold uppercase tracking-wider">Agency Platform</span>
+          <h4 class="text-2xl font-bold text-white mt-2 mb-3">Bluesheep Technologies Agency Site</h4>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            WordPress portal for a digital agency[cite: 1]. Designed service-focused landing pages to drive branding and lead capture[cite: 1].
+          </p>
+        </div>
+        <div class="text-xs text-gray-400 font-mono pt-4 border-t border-gray-700/50">
+          WordPress • Kadence • Custom Plugins
+        </div>
+      </div>
+
+      <div class="card-bg rounded-2xl p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+        <div>
+          <span class="text-xs yellow-accent font-semibold uppercase tracking-wider">Media Platform</span>
+          <h4 class="text-2xl font-bold text-white mt-2 mb-3">Sacha Pakistan — Informative Platform</h4>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            Structured information portal managed for optimal content navigation, Google AdSense monetization, and Monetag integration[cite: 1].
+          </p>
+        </div>
+        <div class="text-xs text-gray-400 font-mono pt-4 border-t border-gray-700/50">
+          WordPress • AdSense • Monetag • AI Content
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="max-w-7xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-xs font-bold uppercase tracking-widest yellow-accent mb-2">Qualifications</h2>
+      <h3 class="text-3xl md:text-4xl font-extrabold text-white">Certifications & Training</h3>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card-bg p-6 rounded-2xl flex items-start gap-4" data-aos="fade-right">
+        <div class="p-3 yellow-bg text-black rounded-xl text-xl font-bold"><i class="fa-solid fa-award"></i></div>
+        <div>
+          <h4 class="text-lg font-bold text-white">Introduction to Digital Marketing</h4>
+          <p class="text-xs yellow-accent mb-1">LUMS, Centre for Continuing Education | Oct - Nov 2024[cite: 1]</p>
+          <p class="text-xs text-gray-400">Digital performance marketing, analytics, and strategy[cite: 1].</p>
+        </div>
+      </div>
+
+      <div class="card-bg p-6 rounded-2xl flex items-start gap-4" data-aos="fade-left">
+        <div class="p-3 yellow-bg text-black rounded-xl text-xl font-bold"><i class="fa-solid fa-brain"></i></div>
+        <div>
+          <h4 class="text-lg font-bold text-white">AI for Business Leaders: AI-Driven Growth</h4>
+          <p class="text-xs yellow-accent mb-1">Lahore Chamber of Commerce & Industry / Hailey College | Aug 2025[cite: 1]</p>
+          <p class="text-xs text-gray-400">Integrating AI models into enterprise strategy and workflows[cite: 1].</p>
+        </div>
+      </div>
+
+      <div class="card-bg p-6 rounded-2xl flex items-start gap-4" data-aos="fade-right">
+        <div class="p-3 yellow-bg text-black rounded-xl text-xl font-bold"><i class="fa-brands fa-wordpress"></i></div>
+        <div>
+          <h4 class="text-lg font-bold text-white">Build a Full Website using WordPress</h4>
+          <p class="text-xs yellow-accent mb-1">Coursera | July 2025[cite: 1]</p>
+          <p class="text-xs text-gray-400">WordPress development, plugin integrations, and site optimization[cite: 1].</p>
+        </div>
+      </div>
+
+      <div class="card-bg p-6 rounded-2xl flex items-start gap-4" data-aos="fade-left">
+        <div class="p-3 yellow-bg text-black rounded-xl text-xl font-bold"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <h4 class="text-lg font-bold text-white">One Million Promoters Initiative</h4>
+          <p class="text-xs yellow-accent mb-1">Dubai Future Foundation / Dubai Centre for AI[cite: 1]</p>
+          <p class="text-xs text-gray-400">Advanced prompt engineering, LLM automation, and vibe coding workflows[cite: 1].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stack Section -->
+  <section id="skills" class="max-w-7xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-xs font-bold uppercase tracking-widest yellow-accent mb-2">Toolkit</h2>
+      <h3 class="text-3xl md:text-4xl font-extrabold text-white">Skills & Technologies</h3>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6" data-aos="fade-up">
+      <div class="card-bg p-6 rounded-2xl text-center">
+        <i class="fa-solid fa-brain text-3xl yellow-accent mb-3"></i>
+        <p class="text-xs font-bold text-white">ChatGPT & Claude[cite: 1]</p>
+      </div>
+      <div class="card-bg p-6 rounded-2xl text-center">
+        <i class="fa-solid fa-code text-3xl yellow-accent mb-3"></i>
+        <p class="text-xs font-bold text-white">VS Code AI[cite: 1]</p>
+      </div>
+      <div class="card-bg p-6 rounded-2xl text-center">
+        <i class="fa-brands fa-wordpress text-3xl yellow-accent mb-3"></i>
+        <p class="text-xs font-bold text-white">WordPress / Elementor[cite: 1]</p>
+      </div>
+      <div class="card-bg p-6 rounded-2xl text-center">
+        <i class="fa-brands fa-shopify text-3xl yellow-accent mb-3"></i>
+        <p class="text-xs font-bold text-white">Shopify Stores[cite: 1]</p>
+      </div>
+      <div class="card-bg p-6 rounded-2xl text-center">
+        <i class="fa-solid fa-fire text-3xl yellow-accent mb-3"></i>
+        <p class="text-xs font-bold text-white">Firebase / Flutter[cite: 1]</p>
+      </div>
+      <div class="card-bg p-6 rounded-2xl text-center">
+        <i class="fa-brands fa-meta text-3xl yellow-accent mb-3"></i>
+        <p class="text-xs font-bold text-white">Meta Ads Suite[cite: 1]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="max-w-5xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-xs font-bold uppercase tracking-widest yellow-accent mb-2">Got Questions?</h2>
+      <h3 class="text-3xl md:text-4xl font-extrabold text-white">Frequently Asked Questions</h3>
+    </div>
+
+    <div class="space-y-6" data-aos="fade-up">
+      <div class="card-bg p-6 rounded-2xl">
+        <h4 class="text-lg font-bold text-white mb-2">What is "Vibe Coding" and how does it benefit my project?</h4>
+        <p class="text-sm text-gray-300 leading-relaxed">Vibe coding utilizes AI models (Claude, ChatGPT, VS Code extensions) alongside technical architecture expertise to build software rapidly[cite: 1]. This enables fast project delivery without sacrificing security or scalability[cite: 1].</p>
+      </div>
+
+      <div class="card-bg p-6 rounded-2xl">
+        <h4 class="text-lg font-bold text-white mb-2">Do you build standard CMS platforms like WordPress and Shopify?</h4>
+        <p class="text-sm text-gray-300 leading-relaxed">Yes! I build and customize WordPress sites using Elementor, Kadence, and Gutenberg, as well as Shopify e-commerce platforms[cite: 1].</p>
+      </div>
+
+      <div class="card-bg p-6 rounded-2xl">
+        <h4 class="text-lg font-bold text-white mb-2">Will my web application or website be fully mobile responsive?</h4>
+        <p class="text-sm text-gray-300 leading-relaxed">Yes. All web layouts and Flutter mobile applications are engineered with fully responsive UI designs for desktop, tablet, and mobile[cite: 1].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 md:px-16 py-24 border-t border-gray-800">
+    <div class="card-bg p-10 md:p-14 rounded-3xl text-center space-y-6 border-2 yellow-border" data-aos="zoom-in">
+      <h3 class="text-3xl md:text-4xl font-extrabold text-white">Let's Work Together</h3>
+      <p class="text-gray-300 text-sm md:text-base max-w-lg mx-auto">
+        Have a project idea or need an AI Vibe Coder on Fiverr? Contact me directly!
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+        <a href="mailto:fazeenzaman@gmail.com" class="px-8 py-3.5 yellow-bg text-black font-bold text-sm rounded-full shadow-lg hover:bg-yellow-400 hover:scale-105 transition-all">
+          fazeenzaman@gmail.com
+        </a>
+        <a href="tel:03298554647" class="px-8 py-3.5 border border-gray-600 text-white font-bold text-sm rounded-full hover:bg-gray-800 hover:scale-105 transition-all">
+          0329-8554647
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-xs text-gray-500 border-t border-gray-800">
+    <p>© 2026 Fazeen Zaman. All Rights Reserved[cite: 1].</p>
+  </footer>
+
+  <!-- AOS (Animate On Scroll) Library Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800,
+      offset: 100
+    });
+  </script>
+</body>
+</html>
