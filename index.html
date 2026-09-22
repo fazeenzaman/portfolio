@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazeen Zaman | AI Systems Architect & Full-Stack Developer</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Library CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8f9fa;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+
+    .editorial-gradient {
+      background: linear-gradient(135deg, rgba(192, 132, 252, 0.25) 0%, rgba(96, 165, 250, 0.25) 100%);
+    }
+
+    .editorial-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .editorial-card:hover {
+      border-color: #a855f7;
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(168, 85, 247, 0.08);
+    }
+
+    .editorial-border {
+      border: 1px solid #d1d5db;
+    }
+
+    .accent-text {
+      color: #7c3aed;
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  </style>
+</head>
+<body class="selection:bg-purple-200 selection:text-purple-900">
+
+  <!-- Editorial Top Nav -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 py-4 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#hero" class="text-xl font-bold tracking-tight text-gray-900 uppercase">
+        Fazeen<span class="accent-text">.Zaman</span>
+      </a>
+
+      <nav class="hidden md:flex space-x-8 text-xs font-semibold tracking-widest text-gray-600 uppercase">
+        <a href="#hero" class="hover:text-purple-600 transition-colors">Home</a>
+        <a href="#about" class="hover:text-purple-600 transition-colors">About</a>
+        <a href="#experience" class="hover:text-purple-600 transition-colors">Experience</a>
+        <a href="#services" class="hover:text-purple-600 transition-colors">Services</a>
+        <a href="#projects" class="hover:text-purple-600 transition-colors">Portfolio</a>
+        <a href="#contact" class="hover:text-purple-600 transition-colors">Contact</a>
+      </nav>
+
+      <a href="#contact" class="px-5 py-2 bg-gray-900 hover:bg-purple-600 text-white font-semibold text-xs tracking-wider uppercase transition-all rounded-none">
+        Hire Me
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="max-w-7xl mx-auto px-6 md:px-16 pt-36 pb-24 min-h-screen flex items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+      
+      <!-- Left Column -->
+      <div class="lg:col-span-6 space-y-6 p-8 md:p-12 editorial-gradient editorial-border relative" data-aos="fade-right" data-aos-duration="1000">
+        <span class="text-xs font-bold tracking-widest text-purple-700 uppercase">// DESIGN PORTFOLIO</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-none">
+          AI SYSTEMS <br/><span class="accent-text">ARCHITECT</span>
+        </h1>
+        <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+          Digital Growth Executive & AI Systems Engineer. Constructing high-performance full-stack web platforms, custom databases, and autonomous automated workflows.
+        </p>
+        <div class="pt-4 flex items-center space-x-4">
+          <a href="#contact" class="px-6 py-3 bg-gray-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-purple-700 transition-colors">
+            Get in Touch
+          </a>
+          <a href="https://wa.me/923298554647" target="_blank" class="px-6 py-3 border border-gray-400 text-gray-900 font-bold text-xs uppercase tracking-wider hover:border-purple-600 transition-colors">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Uses profile.png -->
+      <div class="lg:col-span-6 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+        <div class="editorial-card p-4 relative max-w-md w-full">
+          <div class="absolute -top-3 -right-3 w-12 h-12 bg-purple-200/50 z-0"></div>
+          <div class="relative z-10 overflow-hidden h-[420px]">
+            <img 
+              src="profile.png" 
+              alt="Fazeen Zaman" 
+              class="w-full h-full object-cover object-top"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800';"
+            />
+          </div>
+          <div class="pt-4 flex justify-between items-center text-xs font-semibold uppercase tracking-wider text-gray-500">
+            <span>Fazeen Zaman</span>
+            <span>Lahore, Pakistan</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-7xl mx-auto px-6 md:px-16 py-20 border-t border-gray-200">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-6 space-y-4" data-aos="fade-up">
+        <span class="text-xs font-bold tracking-widest text-purple-700 uppercase">// ABOUT DESIGN & STRATEGY</span>
+        <h2 class="text-3xl font-bold text-gray-900">Bridging Business Goals with Autonomous AI</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          I am a Digital Growth Executive combining my Bachelor of Business Administration (Executive) degree with advanced AI development methodologies. I architect software systems, multi-role market portals, and high-conversion web assets with elite speed and precision.
+        </p>
+      </div>
+      <div class="md:col-span-6 editorial-card p-8" data-aos="fade-up">
+        <h3 class="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wider text-xs">Academic Background</h3>
+        <div class="space-y-4 text-xs font-semibold text-gray-700">
+          <div class="p-3 bg-gray-50 border-l-2 border-purple-600">
+            <span class="text-purple-700 block">2025 - 2029</span>
+            Bachelor of Business Administration (Executive) — National College of Business Administration and Economics
+          </div>
+          <div class="p-3 bg-gray-50 border-l-2 border-gray-400">
+            <span class="text-gray-500 block">2021 - 2023</span>
+            Intermediate (Pre-Medical) — BISE FSD
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Grid -->
+  <section id="experience" class="max-w-7xl mx-auto px-6 md:px-16 py-20 border-t border-gray-200">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="text-xs font-bold tracking-widest text-purple-700 uppercase">// CAREER TRAJECTORY</span>
+      <h2 class="text-3xl font-bold text-gray-900 mt-1">Professional Experience</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="editorial-card p-8 space-y-4" data-aos="fade-up">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900">Digital Growth Executive</h3>
+            <p class="text-xs font-semibold text-purple-700 uppercase tracking-wider">Bluesheep Technologies Pvt Ltd</p>
+          </div>
+          <span class="text-xs font-mono bg-purple-100 text-purple-800 px-3 py-1">Mar 2025 - Present</span>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Managed digital platforms, website projects, and online content for organizational visibility. Developed WordPress websites, social accounts, and automated AI workflows.
+        </p>
+      </div>
+
+      <div class="editorial-card p-8 space-y-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-xl font-bold text-gray-900">Digital Operations Executive</h3>
+            <p class="text-xs font-semibold text-purple-700 uppercase tracking-wider">Marlayz Brüder</p>
+          </div>
+          <span class="text-xs font-mono bg-gray-100 text-gray-800 px-3 py-1">Apr 2024 - Mar 2025</span>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Managed and maintained WordPress website content and functionality. Planned digital marketing content using AI tools for online visibility.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Studio Gallery -->
+  <section id="services" class="max-w-7xl mx-auto px-6 md:px-16 py-20 border-t border-gray-200">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="text-xs font-bold tracking-widest text-purple-700 uppercase">// STUDIO SERVICES</span>
+      <h2 class="text-3xl font-bold text-gray-900 mt-1">Capabilities & Offerings</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="editorial-card p-8 space-y-4" data-aos="fade-up">
+        <div class="w-10 h-10 bg-purple-100 text-purple-700 flex items-center justify-center font-bold">01</div>
+        <h3 class="text-lg font-bold text-gray-900">AI Systems & Full-Stack Apps</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Enterprise-grade web platforms and custom applications built via autonomous AI orchestration.</p>
+      </div>
+
+      <div class="editorial-card p-8 space-y-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-10 h-10 bg-purple-100 text-purple-700 flex items-center justify-center font-bold">02</div>
+        <h3 class="text-lg font-bold text-gray-900">WordPress & E-Commerce</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">High-conversion corporate agency platforms and custom WooCommerce / Shopify setups.</p>
+      </div>
+
+      <div class="editorial-card p-8 space-y-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-10 h-10 bg-purple-100 text-purple-700 flex items-center justify-center font-bold">03</div>
+        <h3 class="text-lg font-bold text-gray-900">Digital Growth & Monetization</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Google AdSense, Monetag, Meta Ads strategy, and automated AI content publishing pipelines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section id="projects" class="max-w-7xl mx-auto px-6 md:px-16 py-20 border-t border-gray-200">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="text-xs font-bold tracking-widest text-purple-700 uppercase">// FEATURED CASE STUDIES</span>
+      <h2 class="text-3xl font-bold text-gray-900 mt-1">Portfolio Showcase</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="editorial-card p-8 flex flex-col justify-between" data-aos="fade-up">
+        <div class="space-y-3">
+          <span class="text-xs font-semibold text-purple-700 uppercase tracking-wider">Full-Stack Application</span>
+          <h3 class="text-2xl font-bold text-gray-900">JETKÖ — On-Demand Cleaning Marketplace</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Multi-role RBAC marketplace architecture, real-time GPS tracking, and split-ledger financial management via Firebase & Flutter.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-gray-100 text-xs font-mono text-gray-500">
+          Flutter • Firebase • Firestore • RBAC
+        </div>
+      </div>
+
+      <div class="editorial-card p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+        <div class="space-y-3">
+          <span class="text-xs font-semibold text-purple-700 uppercase tracking-wider">Corporate Web Build</span>
+          <h3 class="text-2xl font-bold text-gray-900">Marlayz Brüder — Workwear Website</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Professional WordPress platform for a workwear & garment manufacturer with structured product catalogs.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-gray-100 text-xs font-mono text-gray-500">
+          WordPress • Elementor • Gutenberg • Meta Suite
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 md:px-16 py-24 border-t border-gray-200">
+    <div class="editorial-gradient editorial-border p-10 md:p-16 text-center space-y-6" data-aos="zoom-in">
+      <span class="text-xs font-bold tracking-widest text-purple-700 uppercase">// GET IN TOUCH</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">THANK YOU</h2>
+      <p class="text-gray-600 text-sm md:text-base max-w-lg mx-auto">
+        Have an enterprise project or need a high-end AI Systems Architect on Fiverr? Connect directly below!
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+        <a href="mailto:fazeenzaman@gmail.com" class="px-8 py-3.5 bg-gray-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-purple-700 transition-colors">
+          fazeenzaman@gmail.com
+        </a>
+        <a href="tel:03298554647" class="px-8 py-3.5 border border-gray-400 text-gray-900 font-bold text-xs uppercase tracking-wider hover:border-purple-700 transition-colors">
+          0329-8554647
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-xs text-gray-500 border-t border-gray-200 bg-white">
+    <p>© 2026 Fazeen Zaman. All Rights Reserved. Minimal Editorial Portfolio Style.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+</body>
+</html>
